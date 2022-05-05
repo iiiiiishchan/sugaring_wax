@@ -39,50 +39,120 @@ a {
 }
 
 
-
-/* header */
-
 header {
   padding: 16px;
 }
 
-header .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-nav {
-  text-align: center;
-  display: flex;
-}
-
-.menu {
-  display: table;
-  table-layout: fixed;
-  text-align: center;
-  width: 100%;
-  padding-left: 0;
-}
-
-.menu li {
-  display: table-cell;
-  vertical-align: middle;
-}
-
-.menu a:hover {
-  opacity: 0.6;
+.logo {
+  margin: 8px 0 8px 0 ;
 }
 
 .logo a:hover {
   opacity: 0.6;
 }
 
-.logo {
+.icon {
   display: flex;
+  align-items: center;
+} 
+
+header {
+  display: flex;
+  padding: 0 16px;
+  align-items: center;
+} 
+
+header .menu {
+  width: 100%;
+}
+
+.sp-menu {
+  display: flex;
+  margin-left: auto;
+  cursor: pointer;
   align-items: center;
 }
 
+.sp-menu a {
+  padding: 8px;
+}
+
+.sp-menu .icon {
+  padding-right: 4px;
+}
+
+/* .sp-menu .hide {
+  display: none;
+} */
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 50%;
+  right: 0;
+  left: 0;
+  background: rgba(255, 255, 255, 0.95);
+  text-align: center;
+  padding: 64px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .6s;
+}
+
+.overlay.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.overlay #close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  cursor: pointer;
+}
+
+.overlay ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+}
+
+.overlay li {
+  margin-top: 32px;
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity .3s, transform .3s;
+}
+
+.overlay.show li {
+  opacity: 1;
+  transform: none;
+}
+
+.overlay.show li:nth-child(1) {
+  transition-delay: .1s;
+}
+
+.overlay.show li:nth-child(2) {
+  transition-delay: .2s;
+}
+
+.overlay.show li:nth-child(3) {
+  transition-delay: .3s;
+}
+
+.overlay.show li:nth-child(4) {
+  transition-delay: .4s;
+}
+
+.overlay.show li:nth-child(5) {
+  transition-delay: .5s;
+}
+
+.pc-menu {
+  display: none;
+}
 
 /* main */
 
@@ -402,9 +472,39 @@ nav {
     display: none; 
   }
 
-  .container {
+  .pc-menu {
+    display: flex;
+  }
+
+  .pc-menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+
+  .pc-menu a {
+    display: block;
+    width: 100px;
+    text-align: center;
+    justify-content: space-between;
+  }
+
+  .pc-menu a:hover {
+    opacity: 0.6;
+  }
+
+  .sp-menu {
+    display: none;
+  }
+
+  .pc-menu {
     margin: 0 auto;
   }
+
+  .container {
+    margin: 0 auto;
+  }  
 
   .hero h1 {
     padding-bottom: 16px;
