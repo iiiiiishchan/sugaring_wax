@@ -558,9 +558,9 @@ header .menu {
     align-items: center;
   }
 
-  /* .pc-menu ul li {
-    あ
-  } */
+  .pc-menu ul li {
+    justify-content: space-between;
+  }
 
   .pc-menu a {
     display: block;
