@@ -564,9 +564,13 @@ header .menu {
 
   .pc-menu a {
     display: block;
-    width: 100px;
+    width: 130px;
     text-align: center;
     justify-content: space-between;
+  }
+
+  .pc-menu .icon {
+    width: 100px;
   }
 
   .pc-menu a:hover {
