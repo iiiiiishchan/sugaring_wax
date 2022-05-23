@@ -548,6 +548,7 @@ header .menu {
 
   .pc-menu {
     display: flex;
+    margin: 0 auto;
   }
 
   .pc-menu ul {
@@ -561,14 +562,14 @@ header .menu {
   .pc-menu ul li {
     justify-content: space-between;
   }
-
+  
   .pc-menu a {
     display: block;
     width: 130px;
     text-align: center;
     justify-content: space-between;
   }
-
+  
   .pc-menu .icon {
     width: 100px;
   }
@@ -579,10 +580,6 @@ header .menu {
 
   .sp-menu {
     display: none;
-  }
-
-  .pc-menu {
-    margin: 0 auto;
   }
 
   .container {
